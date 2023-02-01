@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>중요한거</title>
+    <style>
+      .wrap {
+        display: flex;
+        gap: 20px;
+      }
+      .wrap * {
+        display: block;
+        padding: 20px;
+        border: 1px solid #000;
+      }
+      .box {
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box">
+        <p>
+          나는 p
+          <span>그리고 나는 span</span>
+        </p>
+        <p>
+          나는 p
+          <span>그리고 나는 span</span>
+        </p>
+        <p>
+          나는 p
+          <span>그리고 나는 span</span>
+        </p>
+      </div>
+    </div>
+    <script>
+      const wrap = document.querySelector(".wrap");
+      const box = document.querySelectorAll(".wrap .box");
+      wrap.addEventListener("click", function (e) {
+        console.log("wrap");
+        console.log(e.target);
+        console.log(e.currentTarget);
+      });
+      box.forEach((item, idx) => {
+        item.addEventListener("click", function (e) {
+          console.log("나는 box");
+        });
+      });
+      const div = document.createElement("div");
+      div.classList.add("box");
+      wrap.appendChild(div);
+    </script>
+  </body>
+</html>

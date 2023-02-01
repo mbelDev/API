@@ -1,0 +1,158 @@
+body {
+  font-family: "Lato", "Pretendard", sans-serif;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+}
+
+header {
+  height: 80px;
+  background-attachment: #fff;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 38px;
+    color: #fff;
+  }
+}
+.list {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  li {
+    img {
+      width: 80px;
+    }
+  }
+}
+.btn-over {
+  display: none;
+}
+
+.search {
+  width: 600px;
+  margin: 30px auto;
+  padding: 10px 38px;
+  background: #fff;
+  display: flex;
+  border-radius: 100px;
+  .search-txt {
+    flex-grow: 1;
+    outline: none;
+    border: none;
+  }
+  .btn-search {
+    background: none;
+    border: none;
+    outline: none;
+    .material-icons {
+      font-size: 36px;
+    }
+  }
+}
+.recent-search-word {
+  width: 100%;
+  margin: 50px 15px;
+  display: flex;
+  gap: 10px;
+  li {
+    padding: 10px 20px;
+    background: rgb(219, 124, 0);
+    color: #fff;
+    border-radius: 100px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+.wndMsg {
+  opacity: 0;
+  &.alert {
+    opacity: 1;
+    transition: all 1000ms;
+  }
+  &.off {
+    opacity: 0;
+    transition: all 1000ms;
+  }
+}
+
+#map {
+  width: 1400px;
+  aspect-ratio: 2;
+  background: #111;
+  margin: 10px auto;
+  color: #111;
+
+  .contents-box {
+    padding: 15px;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, calc(-100% - 52px));
+    &:after {
+      content: "";
+      display: block;
+      border: 10px solid transparent;
+      border-top-color: #fff;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -20px;
+    }
+    div {
+      margin: 5px 0;
+    }
+    .close {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      .material-icons {
+        //font-size: px;
+        color: #222;
+      }
+    }
+    .title {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+.container {
+  width: 100%;
+}
+.customoverlay {
+  background: rgb(3, 90, 144);
+  pad: 10px 15px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  position: absolute;
+  bottom: 50px;
+}
+.wrap {
+  max-width: 960px;
+  display: flex;
+  margin: 0px auto;
+  .thumb {
+    width: 100%;
+
+    aspect-ratio: 2;
+    background-size: cover;
+  }
+}
